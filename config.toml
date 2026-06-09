@@ -1,4 +1,4 @@
-baseURL = "https://workshop-sample.fcjuni.com/"
+baseURL = "https://lucnguyen1002.github.io/fcj-project-nguyendangtuluc/"
 relativeURLs = false
 canonifyURLs = false
 defaultContentLanguage = "en"
@@ -15,8 +15,8 @@ home = [ "HTML", "RSS", "JSON"]
   themeVariant = "workshop"
   # Git hub repo link
   editURL = ""
-  description = ""
-  author = "thienlh@thienlu.com"
+  description = "Báo cáo thực tập FCJ Cloud Intern - Nguyễn Đăng Tự Lực"
+  author = "nguyendangtuluc2003@gmail.com"
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
