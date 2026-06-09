@@ -6,120 +6,124 @@ chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+# Bài thu hoạch "AWS Vietnam Community Day 2026"
 
 ### Mục Đích Của Sự Kiện
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+- Quy tụ cộng đồng AWS tại Việt Nam để chia sẻ kiến thức và kinh nghiệm thực tế.
+- Giới thiệu các công nghệ và dịch vụ AWS mới nhất qua các bài trình bày từ các chuyên gia trong ngành.
+- Tạo cơ hội kết nối, giao lưu giữa các developer, engineer và cộng đồng AWS.
 
 ### Danh Sách Diễn Giả
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+| # | Diễn giả | Chức vụ | Chủ đề |
+|---|----------|---------|--------|
+| 1 | **Tinh Truong** | Platform Engineer @ GoTymeX | Context Is Everything – Making AI Actually Work for You |
+| 2 | **Pham Ng Hai Anh** | AWS Community Builder @ G-AsiaPacific Vietnam | Friendly AI Assistant w/ Amazon Quick |
+| 3 | **Nguyen Tuan Thinh** | AWS Champion Instructor, 12x AWS Certified | From Edge To Origin: CloudFront as Your Foundation |
+| 4 | **Team VIB** | AWS Track Winner (LotusHacks 2026) | 36 hrs with LotusHacks – Building UTMorpho |
+| 5 | **Duc Dao** | Solution Architect @ Cloud Kinetics | Non-Determinism of "Deterministic" LLM Settings |
+| 6 | **Vy Lam** | Sr. Business Systems Analyst @ VPBank | Enterprise-Grade Multi-Agent System |
 
-### Nội Dung Nổi Bật
+### Nội Dung Nổi Bật – Bài "From Edge To Origin: CloudFront as Your Foundation"
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+Trong các bài trình bày, em ấn tượng nhất với bài của anh **Nguyen Tuan Thinh** về **Amazon CloudFront** vì nội dung rất dễ hiểu và liên quan trực tiếp đến kiến thức AWS cơ bản mà em đang học.
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+#### Amazon CloudFront là gì?
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+- **CDN (Content Delivery Network)** của AWS, giúp phân phối nội dung đến người dùng với tốc độ cao và độ trễ thấp.
+- AWS sở hữu **600+ Points of Presence (PoPs)** trải rộng hơn 100 thành phố tại 50+ quốc gia, kết nối bằng đường truyền cáp quang riêng của Amazon.
+- Tại **Việt Nam** có 2 trạm Edge đặt tại **Hà Nội** và **TP.HCM**, kết nối trực tiếp (peering) với các nhà mạng lớn: Viettel, VNPT, FPT, CMC.
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+#### Tại sao cần CloudFront?
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+- **Không có CDN**: Người dùng Việt Nam truy cập server ở Mỹ → dữ liệu đi qua nhiều chặng trên internet công cộng → độ trễ **200ms+**.
+- **Có CloudFront**: Nội dung tĩnh được cache ngay tại Edge gần nhất → độ trễ giảm xuống **dưới 10ms**.
 
-#### Domain-Driven Design (DDD)
+#### Tăng tốc nội dung động (Dynamic Content Acceleration)
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+- CloudFront không chỉ cache nội dung tĩnh mà còn **tối ưu hóa đường truyền cho request động** (không thể cache).
+- Sử dụng **connection pooling**, **tái sử dụng TCP handshake** và **mạng riêng AWS backbone** để giảm độ trễ.
 
-#### Event-Driven Architecture
+#### Origin linh hoạt
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+CloudFront hỗ trợ nhiều loại origin:
+- AWS: S3, EC2, ALB, API Gateway, Lambda Function URL
+- Ngoài AWS: Server on-premise hoặc cloud khác
 
-#### Compute Evolution
+#### Bảo mật với CloudFront
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+- **AWS Shield Standard**: Chống DDoS mặc định, miễn phí.
+- **AWS WAF**: Chặn SQL injection, XSS, bot, rate limiting ngay tại Edge.
+- **SSL/TLS miễn phí**: Tích hợp AWS Certificate Manager (ACM), tự động gia hạn.
+- **Mutual TLS (mTLS)**: Xác thực 2 chiều cho các use case tài chính, bảo mật cao.
+- **Origin cloaking**: Ẩn origin khỏi internet công cộng qua VPC Origin, OAC, hoặc custom header.
+- **Geo Restriction**: Cho phép/chặn truy cập theo quốc gia.
+- **Signed URL**: Bảo vệ nội dung trả phí bằng URL có chữ ký mã hóa, giới hạn thời gian và IP.
 
-#### Amazon Q Developer
+#### Tính sẵn sàng cao (High Availability)
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+- **Caching**: Không chỉ tăng tốc mà còn giúp hệ thống vẫn hoạt động khi origin sập (trả về stale content).
+- **Origin Failover**: Tự động chuyển hướng sang origin thứ 2 khi origin chính bị lỗi.
+- **Custom Error Page**: Hiển thị trang lỗi thân thiện thay vì lỗi mặc định.
+
+#### Tối ưu hiệu năng
+
+- **Multi-layer caching**: PoPs → Regional Edge Caches → Origin Shield → Origin. Request collapsing giúp giảm tải origin (10,000 req → gom thành 1).
+- **HTTP/3 (QUIC/UDP)**: Tải song song hàng chục tài nguyên cùng lúc (thay vì 4-6 như HTTP/1.1).
+- **HTTP Compression**: Giảm 81% thời gian tải trang.
+- **Persistent Connections**: Duy trì kết nối mở về origin, bỏ qua TCP handshake cho các request sau.
+
+#### Edge Computing
+
+- **CloudFront Functions**: Siêu nhanh (<1ms), JavaScript nhẹ, dùng cho URL rewrite, header modification, redirect.
+- **Lambda@Edge**: Full Node.js/Python, dùng cho logic phức tạp, AB testing, geo redirect.
 
 ### Những Gì Học Được
 
-#### Tư Duy Thiết Kế
+#### Kiến thức kỹ thuật
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+- Hiểu cách CDN hoạt động và tại sao nó quan trọng cho performance và bảo mật.
+- Biết cách CloudFront tối ưu cả nội dung tĩnh lẫn động.
+- Hiểu kiến trúc caching đa tầng và request collapsing.
+- Nắm được các tính năng bảo mật từ cơ bản (Shield, WAF) đến nâng cao (mTLS, Signed URL, Origin cloaking).
 
-#### Kiến Trúc Kỹ Thuật
+#### Tư duy thiết kế hệ thống
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+- CloudFront không chỉ là "cache hình ảnh" mà là một **lớp bảo vệ toàn diện** cho hệ thống.
+- Origin cloaking giúp ẩn hoàn toàn server khỏi internet công cộng.
+- Edge computing cho phép xử lý logic ngay tại Edge mà không cần về origin.
 
-#### Chiến Lược Hiện Đại Hóa
+#### Ứng dụng thực tế
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
-
-### Ứng Dụng Vào Công Việc
-
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
+- Có thể áp dụng CloudFront cho project workshop (IoT Weather Platform) để phân phối dashboard nhanh hơn.
+- Kết hợp CloudFront + S3 để hosting static website với performance và bảo mật tốt hơn.
+- Sử dụng Signed URL cho các nội dung cần kiểm soát quyền truy cập.
 
 ### Trải nghiệm trong event
 
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
+Tham gia **AWS Vietnam Community Day 2026** là một trải nghiệm rất bổ ích và đáng nhớ. Một số trải nghiệm nổi bật:
 
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
+#### Học hỏi từ diễn giả chuyên môn cao
+- Anh Nguyen Tuan Thinh với **12 chứng chỉ AWS** đã trình bày rất dễ hiểu, từ cơ bản đến nâng cao.
+- Cách anh dùng ví dụ thực tế (người dùng Việt Nam truy cập server Mỹ) giúp hình dung rõ ràng vấn đề mà CDN giải quyết.
+- Speaker notes chi tiết cho thấy sự chuẩn bị kỹ lưỡng của diễn giả.
 
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
+#### Mở rộng kiến thức
+- Ngoài bài CloudFront, các bài về AI/LLM, Multi-Agent System cũng cho thấy xu hướng công nghệ mới nhất trên AWS.
+- Team VIB chia sẻ trải nghiệm hackathon giúp em thấy cách áp dụng AWS vào sản phẩm thực tế trong thời gian ngắn.
 
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
-
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
+#### Kết nối cộng đồng
+- Được giao lưu với các developer, engineer từ nhiều công ty khác nhau.
+- Cảm nhận được sự phát triển mạnh mẽ của cộng đồng AWS tại Việt Nam.
 
 #### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
+- CloudFront là một dịch vụ toàn diện hơn nhiều so với những gì em hình dung ban đầu (không chỉ cache mà còn bảo mật, edge computing, high availability).
+- Việc đặt CloudFront phía trước hệ thống giúp bảo vệ origin, tăng performance và giảm chi phí vận hành.
+- Edge computing là xu hướng quan trọng, cho phép xử lý logic gần người dùng nhất.
 
 #### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+![AWS Community Day 2026](/images/event1.jpg)
+
+> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật sâu về CloudFront mà còn giúp em mở rộng tầm nhìn về cách thiết kế hệ thống hiệu quả, bảo mật và hiệu năng cao trên AWS.
+

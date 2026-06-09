@@ -5,55 +5,50 @@ weight: 1
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 7:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu Amazon DynamoDB – cơ sở dữ liệu NoSQL trên AWS.
+* Tìm hiểu Amazon CloudFront – dịch vụ CDN phân phối nội dung toàn cầu.
+* Thực hành kết hợp các dịch vụ serverless đã học.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc                                                                                                                                                                                                                                         | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| 2   | - Tìm hiểu Amazon DynamoDB: <br>&emsp; + NoSQL vs SQL, khi nào dùng DynamoDB <br>&emsp; + Table, Item, Attribute <br>&emsp; + Partition Key và Sort Key <br>&emsp; + Read/Write Capacity (On-Demand vs Provisioned)                                 | 02/06/2026   | 02/06/2026      | <https://000060.awsstudygroup.com>         |
+| 3   | - Tìm hiểu thêm DynamoDB: <br>&emsp; + Secondary Indexes (GSI, LSI) <br>&emsp; + DynamoDB Streams <br>&emsp; + TTL (Time to Live) <br> - **Thực hành:** <br>&emsp; + Tạo DynamoDB table <br>&emsp; + CRUD operations qua Console và CLI              | 03/06/2026   | 03/06/2026      | <https://000060.awsstudygroup.com>         |
+| 4   | - Tìm hiểu Amazon CloudFront: <br>&emsp; + CDN là gì và cách hoạt động <br>&emsp; + Edge Locations và Points of Presence <br>&emsp; + Origin types (S3, ALB, Custom) <br>&emsp; + Cache behaviors và TTL                                            | 04/06/2026   | 04/06/2026      | <https://000094.awsstudygroup.com>         |
+| 5   | - Tìm hiểu thêm CloudFront: <br>&emsp; + Origin Access Control (OAC) cho S3 <br>&emsp; + SSL/TLS với AWS Certificate Manager <br>&emsp; + Invalidation để xóa cache <br>&emsp; + Geo Restriction                                                    | 05/06/2026   | 05/06/2026      | <https://000094.awsstudygroup.com>         |
+| 6   | - **Thực hành tổng hợp:** <br>&emsp; + Tạo S3 static website + CloudFront distribution <br>&emsp; + Cấu hình OAC để chỉ cho phép truy cập qua CloudFront <br>&emsp; + Tạo serverless API: API Gateway + Lambda + DynamoDB                           | 06/06/2026   | 06/06/2026      | <https://000094.awsstudygroup.com>         |
 
 
 ### Kết quả đạt được tuần 7:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hiểu được Amazon DynamoDB và cơ sở dữ liệu NoSQL:
+  * Phân biệt NoSQL và SQL, biết khi nào nên dùng DynamoDB
+  * Table design: Partition Key, Sort Key
+  * Capacity modes: On-Demand (linh hoạt) vs Provisioned (tiết kiệm)
+  * Secondary Indexes: GSI cho query linh hoạt, LSI cho sort key thay thế
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Đã thực hành DynamoDB thành công:
+  * Tạo table với Partition Key và Sort Key
+  * Thực hiện CRUD (Create, Read, Update, Delete) qua Console và CLI
+  * Sử dụng Query và Scan để truy vấn dữ liệu
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Hiểu được Amazon CloudFront và CDN:
+  * Cách CDN hoạt động: Edge Locations cache nội dung gần người dùng
+  * Các loại origin được hỗ trợ
+  * Cache behaviors: path pattern, TTL, viewer protocol policy
+  * Origin Access Control (OAC) để bảo vệ S3 origin
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Nắm được các tính năng bảo mật CloudFront:
+  * OAC thay thế OAI để kiểm soát truy cập S3
+  * SSL/TLS miễn phí qua ACM
+  * Geo Restriction để giới hạn truy cập theo quốc gia
+  * Cache Invalidation để xóa cache khi cập nhật nội dung
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
+* Đã thực hành tổng hợp thành công:
+  * Tạo S3 static website + CloudFront distribution với OAC
+  * Website chỉ truy cập được qua CloudFront, không trực tiếp qua S3
+  * Xây dựng serverless API hoàn chỉnh: API Gateway → Lambda → DynamoDB
 

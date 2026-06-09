@@ -6,9 +6,6 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
 > Here, you can freely share your personal opinions about your experience participating in the First Cloud Journey program. This will help the FCJ team improve any shortcomings based on the following aspects:
 
@@ -35,13 +32,22 @@ The company provides an internship allowance and offers flexible working hours w
 ---
 
 ### Additional Questions
-- What did you find **most satisfying** during your internship?  
-- What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
+* **What did you find most satisfying during your internship?**  
+  Having hands-on experience on actual AWS environments and following a well-structured roadmap from basic to advanced services (IAM, VPC, EC2, S3, RDS, Serverless, Containers). Furthermore, the enthusiasm and support from mentors and administrators were outstanding.
 
----
+* **What do you think the program should improve for future interns?**  
+  Providing more guided lab instructions or reference architectures for complex services in the final weeks (such as AWS KMS, Secrets Manager, or Containers/ECS) to make it easier for beginners.
+
+* **If recommending to a friend, would you suggest they intern here? Why or why not?**  
+  Definitely yes. This is a great environment for anyone who wants to pursue a career in Cloud Computing, particularly AWS, thanks to the clear roadmap, hands-on practice, and strong community support.
+
 
 ### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+* **Suggestions to improve the internship experience:**  
+  Organizing weekly or bi-weekly tech sharing sessions on real-world case studies, troubleshooting, and best practices in AWS system design.
+
+* **Desire to continue this program in the future:**  
+  Absolutely. I would love to continue participating in the First Cloud Journey community, either in advanced training programs or as a contributor/mentor to guide future cohorts.
+
+* **Any other comments:**  
+  Special thanks to the organizers, admins, and mentors for building such a high-quality, practical, and meaningful internship program!

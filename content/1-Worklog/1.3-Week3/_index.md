@@ -5,53 +5,49 @@ weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 3 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn about Amazon S3 (Simple Storage Service) and basic storage features.
+* Practice hosting a static website on S3.
+* Learn about Amazon RDS (Relational Database Service) and practice creating a database.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task                                                                                                                                                                                                                                              | Start Date  | Completion Date | Reference Material                        |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | --------------- | ----------------------------------------- |
+| Mon | - Learn about Amazon S3: <br>&emsp; + What is S3, common use cases <br>&emsp; + Bucket and Object <br>&emsp; + Storage classes (Standard, IA, Glacier...) <br>&emsp; + Versioning                                                                  | 05/05/2026  | 05/05/2026      | <https://000057.awsstudygroup.com>         |
+| Tue | - Learn more about S3: <br>&emsp; + Bucket Policy and ACL <br>&emsp; + Static Website Hosting <br>&emsp; + Lifecycle rules <br> - **Practice:** <br>&emsp; + Create an S3 bucket <br>&emsp; + Upload files and manage objects <br>&emsp; + Enable Versioning | 05/06/2026  | 05/06/2026      | <https://000057.awsstudygroup.com>         |
+| Wed | - **Practice hosting a static website on S3:** <br>&emsp; + Create a bucket for static website <br>&emsp; + Configure Bucket Policy for public access <br>&emsp; + Upload HTML/CSS files <br>&emsp; + Access the website via S3 endpoint             | 05/07/2026  | 05/07/2026      | <https://000057.awsstudygroup.com>         |
+| Thu | - Learn about Amazon RDS: <br>&emsp; + What is RDS and supported database engines (MySQL, PostgreSQL, Aurora...) <br>&emsp; + Multi-AZ deployment <br>&emsp; + Read Replica <br>&emsp; + Automated Backup and Snapshot                               | 05/08/2026  | 05/08/2026      | <https://000005.awsstudygroup.com>         |
+| Fri | - **Practice:** <br>&emsp; + Create an RDS instance (MySQL, db.t3.micro) <br>&emsp; + Configure Security Group for RDS <br>&emsp; + Connect from EC2 to RDS <br>&emsp; + Create a database and run basic queries                                     | 05/09/2026  | 05/09/2026      | <https://000005.awsstudygroup.com>         |
 
 
 ### Week 3 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Understood Amazon S3 and storage concepts:
+  * Bucket, Object and data organization
+  * Storage classes and when to use each
+  * Versioning for file version management
+  * Lifecycle rules for automatic storage class transitions
 
-* Successfully created and configured an AWS Free Tier account.
+* Learned S3 access management:
+  * Bucket Policy (JSON-based)
+  * ACL (Access Control List)
+  * Block Public Access settings
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Successfully practiced hosting a static website on S3:
+  * Created a bucket, configured static website hosting
+  * Wrote a Bucket Policy for public read access
+  * Uploaded HTML/CSS and accessed the website via S3 endpoint
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Understood Amazon RDS and its features:
+  * Supported database engines
+  * Multi-AZ for high availability
+  * Read Replica for read scaling
+  * Automated Backup and manual Snapshot
 
-* Used AWS CLI to perform basic operations such as:
+* Successfully completed hands-on practice:
+  * Created an RDS instance MySQL (db.t3.micro) in VPC
+  * Configured Security Group to allow connections from EC2
+  * Connected from EC2 instance to RDS and ran basic queries
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...

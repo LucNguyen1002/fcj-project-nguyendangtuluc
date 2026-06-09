@@ -6,121 +6,123 @@ chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
-
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# Summary Report: "AWS Vietnam Community Day 2026"
 
 ### Event Objectives
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+- Bring together the AWS community in Vietnam to share knowledge and real-world experience.
+- Introduce the latest AWS technologies and services through presentations by industry experts.
+- Create networking opportunities among developers, engineers, and the AWS community.
 
 ### Speakers
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+| # | Speaker | Title / Role | Topic |
+|---|---------|-------------|-------|
+| 1 | **Tinh Truong** | Platform Engineer @ GoTymeX | Context Is Everything – Making AI Actually Work for You |
+| 2 | **Pham Ng Hai Anh** | AWS Community Builder @ G-AsiaPacific Vietnam | Friendly AI Assistant w/ Amazon Quick |
+| 3 | **Nguyen Tuan Thinh** | AWS Champion Instructor, 12x AWS Certified | From Edge To Origin: CloudFront as Your Foundation |
+| 4 | **Team VIB** | AWS Track Winner (LotusHacks 2026) | 36 hrs with LotusHacks – Building UTMorpho |
+| 5 | **Duc Dao** | Solution Architect @ Cloud Kinetics | Non-Determinism of "Deterministic" LLM Settings |
+| 6 | **Vy Lam** | Sr. Business Systems Analyst @ VPBank | Enterprise-Grade Multi-Agent System |
 
-### Key Highlights
+### Key Highlights – "From Edge To Origin: CloudFront as Your Foundation"
 
-#### Identifying the drawbacks of legacy application architecture
+Among all the presentations, I was most impressed by **Nguyen Tuan Thinh**'s talk about **Amazon CloudFront** because its content was very accessible and directly related to the basic AWS knowledge I'm currently learning.
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+#### What is Amazon CloudFront?
 
-#### Transitioning to modern application architecture – Microservices
+- AWS's **CDN (Content Delivery Network)** that delivers content to users with high speed and low latency.
+- AWS owns **600+ Points of Presence (PoPs)** spanning 100+ cities in 50+ countries, connected by Amazon's own fiber optic private backbone.
+- **Vietnam** has 2 Edge Locations in **Hanoi** and **Ho Chi Minh City**, with direct peering to major ISPs: Viettel, VNPT, FPT, CMC.
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+#### Why CloudFront?
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+- **Without CDN**: A Vietnamese user accessing a US server → data travels through many hops on public internet → latency **200ms+**.
+- **With CloudFront**: Static content is cached at the nearest Edge → latency drops to **under 10ms**.
 
-#### Domain-Driven Design (DDD)
+#### Dynamic Content Acceleration
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+- CloudFront doesn't only cache static content – it also **optimizes the path for dynamic requests** (which cannot be cached).
+- Uses **connection pooling**, **TCP handshake reuse**, and the **AWS private backbone** to reduce latency.
 
-#### Event-Driven Architecture
+#### Flexible Origins
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+CloudFront supports multiple origin types:
+- AWS: S3, EC2, ALB, API Gateway, Lambda Function URL
+- Non-AWS: On-premise servers or other cloud providers
 
-#### Compute Evolution
+#### Security with CloudFront
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+- **AWS Shield Standard**: Default DDoS protection, free of charge.
+- **AWS WAF**: Blocks SQL injection, XSS, bots, rate limiting at the Edge.
+- **Free SSL/TLS**: Integrates with AWS Certificate Manager (ACM), auto-renewal.
+- **Mutual TLS (mTLS)**: Two-way authentication for financial and high-security use cases.
+- **Origin cloaking**: Hides the origin from public internet via VPC Origin, OAC, or custom headers.
+- **Geo Restriction**: Allow/block access by country.
+- **Signed URL**: Protects paid content with encrypted signature URLs, time and IP restrictions.
 
-#### Amazon Q Developer
+#### High Availability
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+- **Caching**: Not just for speed – keeps the system running even when the origin is down (serves stale content).
+- **Origin Failover**: Automatically routes to a secondary origin when the primary fails.
+- **Custom Error Page**: Displays user-friendly error pages instead of defaults.
+
+#### Performance Optimization
+
+- **Multi-layer caching**: PoPs → Regional Edge Caches → Origin Shield → Origin. Request collapsing reduces origin load (10,000 requests → collapsed to 1).
+- **HTTP/3 (QUIC/UDP)**: Downloads dozens of resources in parallel (vs. 4-6 with HTTP/1.1).
+- **HTTP Compression**: Reduces page load time by 81%.
+- **Persistent Connections**: Maintains open connections to origin, skipping TCP handshake for subsequent requests.
+
+#### Edge Computing
+
+- **CloudFront Functions**: Ultra-fast (<1ms), lightweight JavaScript, ideal for URL rewrites, header modifications, redirects.
+- **Lambda@Edge**: Full Node.js/Python runtime, suited for complex logic, A/B testing, geo redirects.
 
 ### Key Takeaways
 
-#### Design Mindset
+#### Technical Knowledge
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+- Understood how CDN works and why it's critical for performance and security.
+- Learned how CloudFront optimizes both static and dynamic content.
+- Understood multi-layer caching architecture and request collapsing.
+- Grasped security features from basic (Shield, WAF) to advanced (mTLS, Signed URL, Origin cloaking).
 
-#### Technical Architecture
+#### System Design Thinking
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+- CloudFront is not just "image caching" – it's a **comprehensive protection layer** for the entire system.
+- Origin cloaking completely hides servers from the public internet.
+- Edge computing allows processing logic closest to users without reaching the origin.
 
-#### Modernization Strategy
+#### Practical Applications
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
-
-### Applying to Work
-
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+- CloudFront can be applied to the workshop project (IoT Weather Platform) for faster dashboard delivery.
+- Combining CloudFront + S3 for static website hosting with better performance and security.
+- Using Signed URLs for content requiring access control.
 
 ### Event Experience
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+Attending the **AWS Vietnam Community Day 2026** was a very rewarding and memorable experience. Key highlights include:
 
 #### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+- Nguyen Tuan Thinh, with **12 AWS certifications**, delivered an easy-to-understand presentation from basics to advanced topics.
+- His use of practical examples (Vietnamese users accessing US servers) helped clearly visualize the problems CDN solves.
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
+#### Expanding knowledge
+- Beyond the CloudFront talk, presentations on AI/LLM and Multi-Agent Systems showcased the latest technology trends on AWS.
+- Team VIB's hackathon experience showed how to apply AWS to real products in a short timeframe.
 
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
-
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
+#### Community networking
+- Met developers and engineers from various companies.
+- Felt the strong growth of the AWS community in Vietnam.
 
 #### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+- CloudFront is far more comprehensive than initially imagined (not just caching, but also security, edge computing, and high availability).
+- Placing CloudFront in front of the system protects the origin, boosts performance, and reduces operational costs.
+- Edge computing is an important trend, enabling logic processing closest to users.
 
 #### Some event photos
-*Add your event photos here*  
+![AWS Community Day 2026](/images/event1.jpg)
 
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+> Overall, the event not only provided deep technical knowledge about CloudFront but also broadened my perspective on designing efficient, secure, and high-performance systems on AWS.
+

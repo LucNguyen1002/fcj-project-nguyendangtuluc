@@ -5,54 +5,50 @@ weight: 1
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 6:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu AWS Lambda và mô hình Serverless.
+* Tìm hiểu AWS CloudFormation để triển khai hạ tầng bằng code (Infrastructure as Code).
+* Tìm hiểu Amazon API Gateway để xây dựng REST API.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc                                                                                                                                                                                                                                         | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| 2   | - Tìm hiểu AWS Lambda: <br>&emsp; + Serverless là gì và lợi ích <br>&emsp; + Lambda function: runtime, handler, event <br>&emsp; + Trigger: API Gateway, S3, CloudWatch Events <br>&emsp; + Pricing model (pay per request + duration)              | 26/05/2026   | 26/05/2026      | <https://000022.awsstudygroup.com>         |
+| 3   | - **Thực hành Lambda:** <br>&emsp; + Tạo Lambda function (Python/Node.js) <br>&emsp; + Cấu hình trigger từ S3 (xử lý khi upload file) <br>&emsp; + Xem logs trên CloudWatch Logs <br>&emsp; + Cấu hình Environment Variables và Timeout            | 27/05/2026   | 27/05/2026      | <https://000022.awsstudygroup.com>         |
+| 4   | - Tìm hiểu Amazon API Gateway: <br>&emsp; + REST API vs HTTP API <br>&emsp; + Tạo API endpoint, resource, method <br>&emsp; + Tích hợp API Gateway với Lambda <br> - **Thực hành:** Tạo REST API đơn giản gọi Lambda function                       | 28/05/2026   | 28/05/2026      | <https://000066.awsstudygroup.com>         |
+| 5   | - Tìm hiểu AWS CloudFormation: <br>&emsp; + Infrastructure as Code (IaC) là gì <br>&emsp; + Template structure (YAML/JSON) <br>&emsp; + Stack, Resources, Parameters, Outputs <br>&emsp; + Change Sets và Stack Updates                              | 29/05/2026   | 29/05/2026      | <https://000037.awsstudygroup.com>         |
+| 6   | - **Thực hành CloudFormation:** <br>&emsp; + Viết template tạo VPC + EC2 <br>&emsp; + Deploy stack từ template <br>&emsp; + Update stack với Change Set <br>&emsp; + Delete stack và kiểm tra resource cleanup                                        | 30/05/2026   | 30/05/2026      | <https://000037.awsstudygroup.com>         |
 
 
 ### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hiểu được mô hình Serverless và AWS Lambda:
+  * Không cần quản lý server, auto-scaling tự động
+  * Lambda function với các runtime hỗ trợ (Python, Node.js, Java...)
+  * Event-driven: Lambda được kích hoạt bởi các sự kiện từ nhiều nguồn
+  * Pricing: chỉ trả tiền khi function thực thi
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Đã thực hành Lambda thành công:
+  * Tạo function xử lý event khi upload file lên S3
+  * Theo dõi logs và debug qua CloudWatch Logs
+  * Cấu hình environment variables và timeout phù hợp
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Nắm được Amazon API Gateway:
+  * Phân biệt REST API và HTTP API
+  * Tạo endpoint, resource, method (GET, POST...)
+  * Kết hợp API Gateway + Lambda tạo serverless API
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Hiểu được AWS CloudFormation và Infrastructure as Code:
+  * Tại sao cần IaC: version control, repeatable, consistent
+  * Cấu trúc template: AWSTemplateFormatVersion, Description, Parameters, Resources, Outputs
+  * Stack lifecycle: Create → Update (Change Set) → Delete
+  * Automatic resource cleanup khi delete stack
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
+* Đã thực hành CloudFormation thành công:
+  * Viết template YAML tạo VPC + Subnet + EC2
+  * Deploy và quản lý stack qua Console
+  * Sử dụng Change Set để preview thay đổi trước khi update
+  * Delete stack và xác nhận toàn bộ resource được dọn dẹp
 

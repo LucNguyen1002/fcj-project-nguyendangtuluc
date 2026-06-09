@@ -5,9 +5,6 @@ weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 >Tại đây bạn có thể tự do đóng góp ý kiến cá nhân về những trải nghiệm khi tham gia chương trình First Cloud Journey, giúp team FCJ cải thiện những vấn đề còn thiếu sót dựa trên các hạng mục sau:
 
@@ -33,12 +30,22 @@ Công ty có hỗ trợ phụ cấp thực tập và tạo điều kiện về t
 
 
 ### Một số câu hỏi khác
-- Điều bạn **hài lòng nhất** trong thời gian thực tập?  
-- Điều bạn nghĩ công ty **cần cải thiện** cho các thực tập sinh sau?  
-- Nếu giới thiệu cho bạn bè, bạn có **khuyên họ thực tập ở đây không**? Vì sao?  
+* **Điều bạn hài lòng nhất trong thời gian thực tập?**  
+  Được thực hành thực tế trên môi trường AWS thật thông qua lộ trình học tập rất bài bản (từ IAM, VPC, EC2, S3 đến Serverless, Container). Bên cạnh đó, sự nhiệt tình và sẵn lòng giải đáp của các anh chị Mentor và Admin chính là điều khiến mình cảm thấy trân quý nhất.
+
+* **Điều bạn nghĩ chương trình cần cải thiện cho các thực tập sinh sau?**  
+  Có thể thiết kế thêm các bài Lab có hướng dẫn chi tiết từng bước (Guided Labs) cho những dịch vụ phức tạp ở các tuần cuối (như AWS KMS, Secrets Manager hay ECS/Fargate) để các bạn khóa sau dễ tiếp cận hơn.
+
+* **Nếu giới thiệu cho bạn bè, bạn có khuyên họ thực tập ở đây không? Vì sao?**  
+  Chắc chắn là có. Đây là một môi trường học tập và thực hành tuyệt vời cho bất kỳ ai muốn định hướng theo mảng Cloud (đặc biệt là AWS) nhờ có lộ trình rõ ràng, tài nguyên thực hành thực tế và cộng đồng hỗ trợ rất mạnh mẽ.
 
 
 ### Đề xuất & mong muốn
-- Bạn có đề xuất gì để cải thiện trải nghiệm trong kỳ thực tập?  
-- Bạn có muốn tiếp tục chương trình này trong tương lai?
-- Góp ý khác (tự do chia sẻ):
+* **Đề xuất cải thiện trải nghiệm trong kỳ thực tập:**  
+  Nên tổ chức thêm một số buổi chia sẻ ngắn (Tech Sharing) hàng tuần hoặc hàng hai tuần về các tình huống xử lý sự cố thực tế (troubleshooting) hoặc các Best Practices khi thiết kế hệ thống trên AWS.
+
+* **Mong muốn tiếp tục chương trình trong tương lai:**  
+  Mình rất mong muốn được tiếp tục đồng hành cùng cộng đồng First Cloud Journey trong tương lai, có thể là tham gia các lớp học chuyên sâu hơn hoặc hỗ trợ các bạn khóa sau với vai trò hỗ trợ cộng đồng.
+
+* **Góp ý khác:**  
+  Xin chân thành cảm ơn Ban tổ chức chương trình First Cloud Journey và các anh chị Mentor đã dành thời gian và tâm huyết để xây dựng một chương trình thực tập vô cùng chất lượng, thực tế và ý nghĩa cho sinh viên!

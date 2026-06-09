@@ -5,55 +5,50 @@ weight: 1
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 9:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu Docker và containerization.
+* Tìm hiểu Amazon ECS (Elastic Container Service) để chạy container trên AWS.
+* Hiểu sự khác biệt giữa EC2 launch type và Fargate (serverless containers).
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc                                                                                                                                                                                                                                         | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| 2   | - Tìm hiểu Docker cơ bản: <br>&emsp; + Container vs Virtual Machine <br>&emsp; + Docker Image, Container, Dockerfile <br>&emsp; + Docker Hub và Container Registry <br>&emsp; + Các lệnh cơ bản: build, run, push, pull                             | 16/06/2026   | 16/06/2026      | <https://000015.awsstudygroup.com>         |
+| 3   | - **Thực hành Docker:** <br>&emsp; + Cài đặt Docker Desktop <br>&emsp; + Viết Dockerfile cho ứng dụng Node.js/Python đơn giản <br>&emsp; + Build image và chạy container local <br>&emsp; + Push image lên Amazon ECR (Elastic Container Registry)    | 17/06/2026   | 17/06/2026      | <https://000015.awsstudygroup.com>         |
+| 4   | - Tìm hiểu Amazon ECS: <br>&emsp; + ECS Cluster, Task Definition, Service <br>&emsp; + EC2 launch type vs Fargate launch type <br>&emsp; + Task IAM Role <br>&emsp; + Tích hợp ECS với ALB                                                          | 18/06/2026   | 18/06/2026      | <https://000016.awsstudygroup.com>         |
+| 5   | - **Thực hành ECS với Fargate:** <br>&emsp; + Tạo ECS Cluster <br>&emsp; + Tạo Task Definition sử dụng image từ ECR <br>&emsp; + Deploy Service với Fargate <br>&emsp; + Cấu hình ALB phía trước ECS Service                                         | 19/06/2026   | 19/06/2026      | <https://000016.awsstudygroup.com>         |
+| 6   | - Tìm hiểu thêm về ECS: <br>&emsp; + Auto Scaling cho ECS Service <br>&emsp; + CloudWatch Container Insights <br>&emsp; + So sánh ECS vs EKS (Kubernetes) <br> - Ôn tập và tổng kết kiến thức container                                              | 20/06/2026   | 20/06/2026      | <https://000016.awsstudygroup.com>         |
 
 
 ### Kết quả đạt được tuần 9:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hiểu được Docker và containerization:
+  * Phân biệt Container và Virtual Machine
+  * Dockerfile: FROM, RUN, COPY, EXPOSE, CMD
+  * Docker Image lifecycle: build → tag → push → pull → run
+  * Amazon ECR để lưu trữ Docker images trên AWS
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Đã thực hành Docker thành công:
+  * Viết Dockerfile cho ứng dụng đơn giản
+  * Build image, chạy container trên máy local
+  * Push image lên Amazon ECR
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Nắm được Amazon ECS:
+  * Cluster: nhóm các resources chạy container
+  * Task Definition: blueprint cho container (image, CPU, memory, ports)
+  * Service: duy trì số lượng task mong muốn
+  * EC2 launch type: tự quản lý EC2 instances
+  * Fargate launch type: serverless, không cần quản lý server
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Đã thực hành ECS với Fargate thành công:
+  * Tạo Cluster và deploy Service với Fargate
+  * Kết hợp ALB để load balance traffic đến các containers
+  * Cấu hình Auto Scaling cho ECS Service
+  * Theo dõi container với CloudWatch Container Insights
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
+* Hiểu được sự khác biệt giữa ECS và EKS:
+  * ECS: đơn giản, tích hợp sâu với AWS, phù hợp cho đa số use case
+  * EKS: Kubernetes managed, phù hợp khi cần portability hoặc đã quen Kubernetes
 

@@ -5,55 +5,43 @@ weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 1:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tham gia buổi Kick-off chương trình thực tập FCJ Workforce.
+* Tạo tài khoản AWS Free Tier và nhận $200 AWS Credits.
+* Thiết lập AWS Budgets để quản lý chi phí.
+* Làm quen với AWS Management Console và tìm hiểu IAM cơ bản.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc                                                                                                                                                                                                                                                     | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| 5   | - Tham gia buổi Kick-off chương trình FCJ Workforce <br> - Làm quen với các thành viên và mentor <br> - Nắm nội quy, quy định chương trình thực tập <br> - Nhận lộ trình học tập 12 tuần                                                                     | 17/04/2026   | 17/04/2026      |                                           |
+| 6   | - Tạo tài khoản AWS Free Tier <br> - Kích hoạt và nhận $200 AWS Credits <br> - Tìm hiểu cấu trúc AWS Management Console <br>&emsp; + Thanh điều hướng <br>&emsp; + Tìm kiếm dịch vụ <br>&emsp; + Chọn Region                                                 | 18/04/2026   | 18/04/2026      | <https://000001.awsstudygroup.com>         |
+| 2   | - Thiết lập AWS Budgets để theo dõi chi phí <br>&emsp; + Tạo budget giới hạn hàng tháng <br>&emsp; + Cấu hình cảnh báo qua email khi vượt ngưỡng <br> - Tìm hiểu AWS Billing Dashboard <br>&emsp; + Xem chi phí hiện tại <br>&emsp; + Hiểu Free Tier usage    | 21/04/2026   | 21/04/2026      | <https://000007.awsstudygroup.com>         |
+| 3   | - Tìm hiểu AWS IAM cơ bản: <br>&emsp; + Users, Groups, Policies <br>&emsp; + Phân biệt Root user và IAM user <br>&emsp; + Nguyên tắc Least Privilege <br> - **Thực hành:** <br>&emsp; + Tạo IAM user <br>&emsp; + Gán quyền với Policy                        | 22/04/2026   | 22/04/2026      | <https://000002.awsstudygroup.com>         |
+| 4   | - Tìm hiểu thêm về IAM: <br>&emsp; + Roles <br>&emsp; + MFA (Multi-Factor Authentication) <br> - **Thực hành:** <br>&emsp; + Bật MFA cho Root account <br>&emsp; + Tạo IAM Role <br>&emsp; + Đăng nhập bằng IAM user thay vì Root                             | 23/04/2026   | 23/04/2026      | <https://000002.awsstudygroup.com>         |
+| 5   | - Ôn tập lại kiến thức tuần 1 <br> - Tổng hợp ghi chú và viết worklog <br> - Chuẩn bị nội dung cho tuần 2                                                                                                                                                    | 24/04/2026   | 25/04/2026      |                                           |
 
 
 ### Kết quả đạt được tuần 1:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Tham gia buổi Kick-off, hiểu rõ lộ trình và mục tiêu của chương trình FCJ Workforce trong 12 tuần.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Đã tạo thành công tài khoản AWS Free Tier và nhận được $200 AWS Credits để phục vụ việc thực hành.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Thiết lập AWS Budgets với cảnh báo chi phí qua email, giúp kiểm soát ngân sách sử dụng AWS trong suốt quá trình thực tập.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Hiểu cách sử dụng AWS Billing Dashboard để theo dõi chi phí và mức sử dụng Free Tier.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Nắm được các khái niệm cơ bản về IAM:
+  * Phân biệt Root user và IAM user
+  * Users, Groups, Policies
+  * Roles và cách sử dụng
+  * Nguyên tắc Least Privilege (quyền tối thiểu)
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
+* Đã thực hành bảo mật tài khoản:
+  * Bật MFA cho Root account
+  * Tạo IAM user riêng để sử dụng hàng ngày thay vì Root
+  * Gán quyền thông qua IAM Policy
 

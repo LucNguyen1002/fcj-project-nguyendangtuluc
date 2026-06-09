@@ -7,10 +7,7 @@ chapter: false
 
 # Internship Report
 
-<!--{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
--->
+<!---->
 
 ### Student Information:
 
@@ -24,7 +21,7 @@ chapter: false
 
 &emsp; **Major:** Information Technology
 
-&emsp; **Class:** AWS082025
+&emsp; **Class:** AWS042026
 
 &emsp; **Internship Company:** Amazon Web Services Vietnam Co., Ltd.
 

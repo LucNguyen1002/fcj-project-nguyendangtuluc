@@ -5,55 +5,51 @@ weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 2:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu Amazon VPC (Virtual Private Cloud) và các thành phần mạng cơ bản.
+* Tìm hiểu Amazon EC2 (Elastic Compute Cloud) và thực hành tạo EC2 instance.
+* Nắm được cách kết nối SSH vào EC2 và quản lý Security Group.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc                                                                                                                                                                                                                                             | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| 2   | - Tìm hiểu Amazon VPC: <br>&emsp; + VPC là gì và tại sao cần VPC <br>&emsp; + Subnet (Public / Private) <br>&emsp; + Internet Gateway <br>&emsp; + Route Table <br> - Tìm hiểu CIDR block và cách phân chia IP                                        | 28/04/2026   | 28/04/2026      | <https://000003.awsstudygroup.com>         |
+| 3   | - Tìm hiểu thêm về VPC: <br>&emsp; + NAT Gateway <br>&emsp; + Security Group vs Network ACL <br>&emsp; + Elastic IP <br> - **Thực hành:** <br>&emsp; + Tạo VPC với public và private subnet <br>&emsp; + Cấu hình Internet Gateway và Route Table      | 29/04/2026   | 29/04/2026      | <https://000003.awsstudygroup.com>         |
+| 4   | - Tìm hiểu Amazon EC2 cơ bản: <br>&emsp; + Instance types (t2.micro, t3.micro...) <br>&emsp; + AMI (Amazon Machine Image) <br>&emsp; + Instance lifecycle (Start, Stop, Terminate) <br>&emsp; + Key Pair để SSH                                        | 30/04/2026   | 30/04/2026      | <https://000004.awsstudygroup.com>         |
+| 5   | - Tìm hiểu EBS (Elastic Block Store): <br>&emsp; + Các loại EBS volume (gp2, gp3, io1...) <br>&emsp; + Snapshot <br> - Tìm hiểu Security Group: <br>&emsp; + Inbound / Outbound rules <br>&emsp; + Cho phép SSH (port 22), HTTP (port 80)               | 01/05/2026   | 01/05/2026      | <https://000004.awsstudygroup.com>         |
+| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance (Amazon Linux 2, t2.micro) <br>&emsp; + Cấu hình Security Group cho SSH và HTTP <br>&emsp; + Kết nối SSH vào EC2 <br>&emsp; + Gắn thêm EBS volume <br>&emsp; + Gán Elastic IP cho EC2                    | 02/05/2026   | 02/05/2026      | <https://000004.awsstudygroup.com>         |
 
 
 ### Kết quả đạt được tuần 2:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hiểu được Amazon VPC và các thành phần mạng cơ bản:
+  * VPC, Subnet (Public/Private)
+  * Internet Gateway, NAT Gateway
+  * Route Table
+  * CIDR block và phân chia IP
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Phân biệt được Security Group và Network ACL:
+  * Security Group: stateful, áp dụng ở mức instance
+  * Network ACL: stateless, áp dụng ở mức subnet
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Đã thực hành tạo VPC hoàn chỉnh với public và private subnet, cấu hình Internet Gateway và Route Table.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Nắm được các khái niệm cơ bản về Amazon EC2:
+  * Instance types và cách chọn loại phù hợp
+  * AMI và cách sử dụng
+  * Instance lifecycle
+  * Key Pair cho SSH
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Hiểu về EBS (Elastic Block Store):
+  * Các loại volume và use case
+  * Tạo và quản lý Snapshot
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
+* Đã thực hành thành công:
+  * Tạo EC2 instance (Amazon Linux 2, t2.micro) trong VPC
+  * Cấu hình Security Group cho SSH và HTTP
+  * Kết nối SSH vào EC2 từ máy local
+  * Gắn thêm EBS volume vào instance
+  * Gán Elastic IP cho EC2 instance
 
