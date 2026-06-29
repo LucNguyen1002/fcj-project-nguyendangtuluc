@@ -21,11 +21,11 @@ Trong quá trình thực tập, em đã tham gia các events, với mỗi event 
 
 
 ### [Event 2](4.2-Event2/)
-&emsp;**Tên sự kiện:** *(Sẽ cập nhật sau)*
+&emsp;**Tên sự kiện:** AWS Vietnam Community Day 2026
 
-&emsp;**Thời gian:** *(Sẽ cập nhật sau)*
+&emsp;**Thời gian:** 27/06/2026
 
-&emsp;**Địa điểm:** *(Sẽ cập nhật sau)*
+&emsp;**Địa điểm:** TP. Hồ Chí Minh
 
 &emsp;**Vai trò trong sự kiện:** Người tham dự
 

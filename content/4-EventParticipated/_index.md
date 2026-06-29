@@ -21,11 +21,11 @@ During my internship, I participated in various events. Each one was a memorable
 ---
 
 ### [Event 2](4.2-Event2/)  
-&emsp;**Event Name:** *(To be updated)*
+&emsp;**Event Name:** AWS Vietnam Community Day 2026
 
-&emsp;**Date & Time:** *(To be updated)*
+&emsp;**Date & Time:** June 27, 2026
 
-&emsp;**Location:** *(To be updated)*
+&emsp;**Location:** Ho Chi Minh City
 
 &emsp;**Role:** Attendee
 

@@ -1,56 +1,31 @@
 ---
 title: "Worklog Tuần 11"
-date: 2024-01-01
-weight: 2
+date: 2026-06-26
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
 
-
 ### Mục tiêu tuần 11:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Deploy hoàn chỉnh trang web Workshop lên môi trường Production sử dụng GitHub Pages thông qua Git.
+* Cấu hình quy trình tự động hóa CI/CD với GitHub Actions.
+* Kiểm thử hệ thống, liên kết và hiển thị trên môi trường thực tế.
+* Sửa lỗi giao diện và đảm bảo tính tương thích đa nền tảng.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Các công việc đã triển khai trong tuần này:
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Đóng gói mã nguồn và thực hiện lệnh Git push lên nhánh `main` của repository GitHub <br>- Cấu hình tệp tin workflow GitHub Actions (`hugo.yml`) để tự động kích hoạt tiến trình build website tĩnh khi có commit mới | 22/06/2026 | 22/06/2026 | [GitHub Pages Docs](https://docs.github.com/pages) |
+| 3 | - Cấu hình tên miền tùy chỉnh (Custom Domain) trỏ về GitHub Pages bằng cách thiết lập các bản ghi DNS (CNAME, A Records) <br>- Kích hoạt tính năng bảo mật HTTPS của GitHub Pages qua chứng chỉ SSL/TLS được tự động cấp phát | 23/06/2026 | 23/06/2026 | Quản lý DNS tên miền |
+| 4 | - Kiểm thử thủ công (Manual Testing) toàn bộ trang web: Check liên kết gãy, hình ảnh tải chậm, kiểm tra chuyển đổi ngôn ngữ Anh - Việt | 24/06/2026 | 24/06/2026 | Test case tự xây dựng |
+| 5 | - Kiểm thử khả năng hiển thị giao diện Responsive trên các thiết bị di động (iPhone/iPad/Android) và các trình duyệt Chrome, Safari, Firefox | 25/06/2026 | 25/06/2026 | DevTools Browser |
+| 6 | - Tối ưu hóa dung lượng hình ảnh tĩnh để đẩy nhanh tốc độ load trang <br>- Tiếp nhận feedback từ người dùng thử để tinh chỉnh nội dung và bố cục báo cáo <br>- Viết báo cáo tuần 11 | 26/06/2026 | 26/06/2026 | Nhật ký dự án |
 
 ### Kết quả đạt được tuần 11:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Deploy thành công trang web báo cáo thực tập & Workshop lên GitHub Pages, hoạt động công khai trên internet.
+* Cấu hình thành công pipeline CI/CD bằng GitHub Actions tự động build và deploy mỗi khi push code bằng Git.
+* Tên miền tùy chỉnh và HTTPS bảo mật hoạt động ổn định trên GitHub Pages.
+* Hệ thống liên kết, hình ảnh hiển thị mượt mà không xảy ra lỗi 404 hay lỗi giao diện.
+* Website hiển thị tốt trên cả máy tính lẫn thiết bị di động, tối ưu hóa trải nghiệm đọc báo cáo.

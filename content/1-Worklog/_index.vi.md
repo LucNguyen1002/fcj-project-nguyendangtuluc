@@ -23,12 +23,12 @@ Dưới đây là nhật ký công việc (worklog) chi tiết của em trong su
 
 **Tuần 7:** [Amazon DynamoDB & Amazon CloudFront](1.7-week7/)
 
-**Tuần 8:** [AWS Security – WAF, KMS & Secrets Manager](1.8-week8/)
+**Tuần 8:** [Tìm hiểu RDS, tạo và kết nối cơ sở dữ liệu](1.8-week8/)
 
-**Tuần 9:** [Docker & Amazon ECS](1.9-week9/)
+**Tuần 9:** [Tích hợp EC2, S3, RDS thành hệ thống hoàn chỉnh](1.9-week9/)
 
-**Tuần 10:** [Làm công việc L...](1.10-week10/)
+**Tuần 10:** [Xây dựng nội dung workshop và hoàn thiện website bằng Hugo](1.10-week10/)
 
-**Tuần 11:** [Làm công việc M...](1.11-week11/)
+**Tuần 11:** [Deploy workshop, kiểm thử hệ thống](1.11-week11/)
 
-**Tuần 12:** [Làm công việc N...](1.12-week12/)
+**Tuần 12:** [Nghiệm thu dự án và hoàn thiện báo cáo thực tập](1.12-week12/)

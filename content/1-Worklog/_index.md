@@ -23,12 +23,12 @@ Below is the detailed worklog of my tasks and learning progress during the 12-we
 
 **Week 7:** [Amazon DynamoDB & Amazon CloudFront](1.7-week7/)
 
-**Week 8:** [AWS Security – WAF, KMS & Secrets Manager](1.8-week8/)
+**Week 8:** [Learn about RDS, create and connect database](1.8-week8/)
 
-**Week 9:** [Docker & Amazon ECS](1.9-week9/)
+**Week 9:** [Integrate EC2, S3, RDS into a complete system](1.9-week9/)
 
-**Week 10:** [Doing task L...](1.10-week10/)
+**Week 10:** [Build workshop content and complete website using Hugo](1.10-week10/)
 
-**Week 11:** [Doing task M...](1.11-week11/)
+**Week 11:** [Deploy workshop, system testing](1.11-week11/)
 
-**Week 12:** [Doing task N...](1.12-week12/)
+**Week 12:** [Project acceptance and internship report completion](1.12-week12/)
