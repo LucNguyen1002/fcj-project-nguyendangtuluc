@@ -6,18 +6,16 @@ chapter: false
 pre: " <b> 3. </b> "
 ---
 
+Tại đây sẽ là phần liệt kê và giới thiệu các blog đã dịch/chuyển ngữ trong quá trình thực tập.
 
-Tại đây sẽ là phần liệt kê, giới thiệu các blogs mà các bạn đã dịch. Ví dụ:
+### [Blog 1 - Deploy Backend lên AWS EC2 và lỗi chỉ vì chữ hoa](3.1-Blog1/)
 
-###  [Blog 1 - Getting started with healthcare data lakes: Using microservices](3.1-Blog1/)
-Blog này giới thiệu cách bắt đầu xây dựng data lake trong lĩnh vực y tế bằng cách áp dụng kiến trúc microservices. Bạn sẽ tìm hiểu vì sao data lake quan trọng trong việc lưu trữ và phân tích dữ liệu y tế đa dạng (hồ sơ bệnh án điện tử, dữ liệu xét nghiệm, thiết bị IoT y tế…), cách microservices giúp hệ thống linh hoạt, dễ mở rộng và dễ bảo trì hơn. Bài viết cũng hướng dẫn các bước khởi tạo môi trường, tổ chức pipeline xử lý dữ liệu, và đảm bảo tuân thủ các tiêu chuẩn bảo mật & quyền riêng tư như HIPAA.
-###  [Blog 2 - ...](3.2-Blog2/)
-Blog này giới thiệu cách bắt đầu xây dựng data lake trong lĩnh vực y tế bằng cách áp dụng kiến trúc microservices. Bạn sẽ tìm hiểu vì sao data lake quan trọng trong việc lưu trữ và phân tích dữ liệu y tế đa dạng (hồ sơ bệnh án điện tử, dữ liệu xét nghiệm, thiết bị IoT y tế…), cách microservices giúp hệ thống linh hoạt, dễ mở rộng và dễ bảo trì hơn. Bài viết cũng hướng dẫn các bước khởi tạo môi trường, tổ chức pipeline xử lý dữ liệu, và đảm bảo tuân thủ các tiêu chuẩn bảo mật & quyền riêng tư như HIPAA.
-###  [Blog 3 - ...](3.3-Blog3/)
-Blog này giới thiệu cách bắt đầu xây dựng data lake trong lĩnh vực y tế bằng cách áp dụng kiến trúc microservices. Bạn sẽ tìm hiểu vì sao data lake quan trọng trong việc lưu trữ và phân tích dữ liệu y tế đa dạng (hồ sơ bệnh án điện tử, dữ liệu xét nghiệm, thiết bị IoT y tế…), cách microservices giúp hệ thống linh hoạt, dễ mở rộng và dễ bảo trì hơn. Bài viết cũng hướng dẫn các bước khởi tạo môi trường, tổ chức pipeline xử lý dữ liệu, và đảm bảo tuân thủ các tiêu chuẩn bảo mật & quyền riêng tư như HIPAA.
-###  [Blog 4 - ...](3.4-Blog4/)
-Blog này giới thiệu cách bắt đầu xây dựng data lake trong lĩnh vực y tế bằng cách áp dụng kiến trúc microservices. Bạn sẽ tìm hiểu vì sao data lake quan trọng trong việc lưu trữ và phân tích dữ liệu y tế đa dạng (hồ sơ bệnh án điện tử, dữ liệu xét nghiệm, thiết bị IoT y tế…), cách microservices giúp hệ thống linh hoạt, dễ mở rộng và dễ bảo trì hơn. Bài viết cũng hướng dẫn các bước khởi tạo môi trường, tổ chức pipeline xử lý dữ liệu, và đảm bảo tuân thủ các tiêu chuẩn bảo mật & quyền riêng tư như HIPAA.
-###  [Blog 5 - ...](3.5-Blog5/)
-Blog này giới thiệu cách bắt đầu xây dựng data lake trong lĩnh vực y tế bằng cách áp dụng kiến trúc microservices. Bạn sẽ tìm hiểu vì sao data lake quan trọng trong việc lưu trữ và phân tích dữ liệu y tế đa dạng (hồ sơ bệnh án điện tử, dữ liệu xét nghiệm, thiết bị IoT y tế…), cách microservices giúp hệ thống linh hoạt, dễ mở rộng và dễ bảo trì hơn. Bài viết cũng hướng dẫn các bước khởi tạo môi trường, tổ chức pipeline xử lý dữ liệu, và đảm bảo tuân thủ các tiêu chuẩn bảo mật & quyền riêng tư như HIPAA.
-###  [Blog 6 - ...](3.6-Blog6/)
-Blog này giới thiệu cách bắt đầu xây dựng data lake trong lĩnh vực y tế bằng cách áp dụng kiến trúc microservices. Bạn sẽ tìm hiểu vì sao data lake quan trọng trong việc lưu trữ và phân tích dữ liệu y tế đa dạng (hồ sơ bệnh án điện tử, dữ liệu xét nghiệm, thiết bị IoT y tế…), cách microservices giúp hệ thống linh hoạt, dễ mở rộng và dễ bảo trì hơn. Bài viết cũng hướng dẫn các bước khởi tạo môi trường, tổ chức pipeline xử lý dữ liệu, và đảm bảo tuân thủ các tiêu chuẩn bảo mật & quyền riêng tư như HIPAA.
+Blog này chia sẻ một lỗi thực tế khi deploy backend Node.js từ Windows local lên AWS EC2 Ubuntu/Linux: giá trị Boolean trong file `.env` bị xử lý sai do khác biệt chữ hoa và chữ thường. Bài viết giải thích nguyên nhân, cách khắc phục nhanh bằng việc chuẩn hóa giá trị cấu hình, đồng thời đề xuất hướng quản lý biến môi trường và secret an toàn hơn với AWS Systems Manager Parameter Store hoặc AWS Secrets Manager.
+
+### [Blog 2 - AWS Cost & AI: Khi chạy cloud không còn chỉ là vấn đề kỹ thuật](3.2-Blog2/)
+
+Blog này chia sẻ trải nghiệm khi hệ thống AWS bắt đầu phát sinh bài toán chi phí sau giai đoạn deploy backend thành công. Nội dung tập trung vào hiểu đúng AWS Free Tier, kiểm soát EC2/EBS, thiết lập AWS Budgets, Billing Alarm, Cost Explorer, và cách thử nghiệm các dịch vụ AI như Bedrock, SageMaker, Comprehend trong môi trường sandbox để tránh vượt ngân sách.
+
+### Blog 3
+
+Nội dung sẽ được cập nhật sau.
