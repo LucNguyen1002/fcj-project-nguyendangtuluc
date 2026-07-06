@@ -16,6 +16,6 @@ This blog shares a practical issue when deploying a Node.js backend from a Windo
 
 This blog shares the team's experience when AWS cost became an important concern after the backend deployment worked successfully. It focuses on understanding AWS Free Tier correctly, controlling EC2/EBS usage, setting up AWS Budgets, Billing Alarm, Cost Explorer, and testing AI services such as Bedrock, SageMaker, and Comprehend in a sandbox environment to avoid unexpected spending.
 
-### Blog 3
+### [Blog 3 - Deploying a Serverless Application with AWS Lambda and Amazon API Gateway](3.3-Blog3/)
 
-Content will be updated later.
+This blog shares the team's experience learning about serverless architecture on AWS after deploying a backend with EC2. It focuses on how API Gateway, Lambda, DynamoDB, IAM Role, and CloudWatch work together to build REST APIs without direct server management, while also discussing benefits, limitations, cold starts, and cost considerations compared with the traditional EC2 model.

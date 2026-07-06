@@ -16,6 +16,6 @@ Blog này chia sẻ một lỗi thực tế khi deploy backend Node.js từ Wind
 
 Blog này chia sẻ trải nghiệm khi hệ thống AWS bắt đầu phát sinh bài toán chi phí sau giai đoạn deploy backend thành công. Nội dung tập trung vào hiểu đúng AWS Free Tier, kiểm soát EC2/EBS, thiết lập AWS Budgets, Billing Alarm, Cost Explorer, và cách thử nghiệm các dịch vụ AI như Bedrock, SageMaker, Comprehend trong môi trường sandbox để tránh vượt ngân sách.
 
-### Blog 3
+### [Blog 3 - Triển khai ứng dụng Serverless với AWS Lambda và Amazon API Gateway](3.3-Blog3/)
 
-Nội dung sẽ được cập nhật sau.
+Blog này trình bày trải nghiệm tìm hiểu kiến trúc Serverless trên AWS sau khi đã triển khai backend bằng EC2. Nội dung tập trung vào cách API Gateway, Lambda, DynamoDB, IAM Role và CloudWatch phối hợp để xây dựng REST API không cần tự quản lý server, đồng thời phân tích ưu điểm, hạn chế, cold start và góc nhìn chi phí khi so sánh với mô hình EC2 truyền thống.
