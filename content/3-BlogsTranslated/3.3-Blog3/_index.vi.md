@@ -8,6 +8,8 @@ pre: " <b> 3.3. </b> "
 
 # Triển khai ứng dụng Serverless với AWS Lambda và Amazon API Gateway
 
+🔗 **Link bài viết:** [Facebook - AWS Study Group FCJ](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2203965220368438/)
+
 Sau khi đã triển khai backend trên Amazon EC2 và tìm hiểu cách tối ưu chi phí khi vận hành hệ thống trên AWS, nhóm bắt đầu đặt ra một câu hỏi mới: liệu có thể triển khai API mà không cần tự quản lý máy chủ hay không?
 
 EC2 mang lại rất nhiều quyền kiểm soát. Người dùng có thể chủ động cấu hình hệ điều hành, cài runtime, quản lý networking, storage và security group. Tuy nhiên, đi kèm với đó là nhiều công việc vận hành như theo dõi trạng thái instance, cập nhật phần mềm, vá lỗi hệ điều hành, khởi động hoặc tắt server, và tự thiết kế khả năng mở rộng.

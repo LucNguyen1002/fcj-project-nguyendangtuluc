@@ -8,6 +8,8 @@ pre: " <b> 3.1. </b> "
 
 # Deploying a Backend to AWS EC2 and the Bug Caused by Capital Letters
 
+🔗 **Blog post link:** [Facebook - AWS Study Group FCJ](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2184227519008875/)
+
 When deploying a backend application from a local environment to AWS EC2, not every issue appears as a clear runtime error. The application may start successfully and the server may keep running, while some internal logic behaves incorrectly. In this case, the root cause came from a very small detail: uppercase and lowercase values in environment variables.
 
 On a local Windows environment, the Node.js application read the `.env` file and handled configuration normally. However, after the source code was deployed to an EC2 instance running Ubuntu/Linux, several Boolean flags were no longer interpreted correctly. Some automated features stopped working, conditions returned false, and debugging took longer because the application did not throw an obvious error.

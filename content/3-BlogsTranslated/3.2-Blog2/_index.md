@@ -8,6 +8,8 @@ pre: " <b> 3.2. </b> "
 
 # AWS Cost & AI: When Running Cloud Becomes a Cost Management Problem
 
+🔗 **Blog post link:** [Facebook - AWS Study Group FCJ](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2199844680780492/)
+
 During the early stage of learning and practicing with AWS, the focus is often technical: how to deploy an application to EC2, how to configure the backend environment, whether the server runs correctly, and whether the APIs respond as expected. However, once the system becomes more stable, another important topic becomes visible: cloud operating cost.
 
 In parallel with backend deployment, the team also started exploring AWS AI services such as **Amazon Bedrock**, **Amazon SageMaker**, and other AWS AI Services like **Amazon Comprehend**. From that point, the team realized that cloud is not only about whether an application can be deployed, but also about how much it costs to run every day.

@@ -8,6 +8,8 @@ pre: " <b> 3.1. </b> "
 
 # Deploy Backend lên AWS EC2 và lỗi chỉ vì chữ hoa
 
+🔗 **Link bài viết:** [Facebook - AWS Study Group FCJ](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2184227519008875/)
+
 Khi triển khai backend từ môi trường local lên AWS EC2, nhiều lỗi không xuất hiện ngay dưới dạng error rõ ràng. Ứng dụng vẫn khởi động, server vẫn chạy, nhưng một vài logic bên trong lại hoạt động sai. Trường hợp trong bài viết này đến từ một chi tiết rất nhỏ: cách viết hoa, viết thường của giá trị trong environment variables.
 
 Trong môi trường local Windows, ứng dụng Node.js đọc file `.env` và xử lý các biến cấu hình bình thường. Tuy nhiên, khi source code được deploy lên EC2 chạy Ubuntu/Linux, một số flag Boolean không còn được hiểu đúng. Các chức năng tự động không chạy, điều kiện kiểm tra trả về sai, và quá trình debug mất khá nhiều thời gian vì hệ thống không báo lỗi trực tiếp.

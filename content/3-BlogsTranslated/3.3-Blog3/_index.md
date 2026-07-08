@@ -8,6 +8,8 @@ pre: " <b> 3.3. </b> "
 
 # Deploying a Serverless Application with AWS Lambda and Amazon API Gateway
 
+🔗 **Blog post link:** [Facebook - AWS Study Group FCJ](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2203965220368438/)
+
 After deploying a backend on Amazon EC2 and learning how to optimize cloud operating costs, the team started asking a new question: is there a way to deploy an API without directly managing servers?
 
 EC2 provides a high level of control. Users can configure the operating system, install runtimes, manage networking, storage, and security groups. However, this also comes with operational responsibilities such as monitoring instance health, updating software, patching the operating system, starting or stopping servers, and planning scalability.
