@@ -12,6 +12,8 @@ The system is designed to support stock analysis using AWS Serverless architectu
 
 The system automatically collects market data, calculates technical indicators such as **RSI**, **MACD**, **MA**, and **Volume**, then sends the calculated indicators to Amazon Bedrock to generate analysis and investment recommendations. The result is displayed on a Dashboard so that a Trader can review, approve, or reject it before sending an email notification to customers.
 
+**Project source code:** [aws-stock-analyzer-serverless](https://github.com/DaoPhanXuanThien/aws-stock-analyzer-serverless.git)
+
 ![Stock Alerts System Architecture](/images/2-Proposal/stock-alerts-architecture.png)
 
 ## Who are the customers?
@@ -38,4 +40,3 @@ The system automates the main steps:
 6. Allow the Trader to approve results before sending emails to customers.
 
 As a result, the system reduces analysis time, improves the ability to monitor multiple tickers at the same time, and ensures that the final recommendation remains under human control.
-

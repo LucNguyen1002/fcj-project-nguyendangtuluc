@@ -12,10 +12,11 @@ Workshop này hướng dẫn triển khai một hệ thống phân tích cổ ph
 
 Mục tiêu chính của workshop là giúp người học hiểu cách kết hợp các dịch vụ AWS managed/serverless để xây dựng một pipeline xử lý dữ liệu tài chính có khả năng mở rộng, kiểm soát chi phí tốt và vẫn giữ cơ chế kiểm duyệt của Trader trước khi gửi khuyến nghị cho khách hàng.
 
+**Mã nguồn dự án:** [aws-stock-analyzer-serverless](https://github.com/DaoPhanXuanThien/aws-stock-analyzer-serverless.git)
+
 #### Nội dung
 
 1. [Tổng quan dự án](5.1-Workshop-overview/)
 2. [Chuẩn bị và triển khai dịch vụ](5.2-Prerequiste/)
 3. [Lý do lựa chọn kiến trúc](5.3-Why-Choose-Structure/)
 4. [Kiểm thử hệ thống](5.4-Test/)
-

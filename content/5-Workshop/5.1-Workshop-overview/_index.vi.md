@@ -12,6 +12,8 @@ Hệ thống được xây dựng nhằm hỗ trợ quá trình phân tích cổ
 
 Hệ thống tự động thu thập dữ liệu thị trường, tính toán các chỉ báo kỹ thuật như **RSI**, **MACD**, **MA** và **Volume**, sau đó gửi các chỉ số đã tính cho Amazon Bedrock để tạo phân tích và khuyến nghị đầu tư. Kết quả phân tích được hiển thị trên Dashboard để Trader xem xét, phê duyệt hoặc từ chối trước khi gửi thông báo đến khách hàng qua email.
 
+**Mã nguồn dự án:** [aws-stock-analyzer-serverless](https://github.com/DaoPhanXuanThien/aws-stock-analyzer-serverless.git)
+
 ![Stock Alerts System Architecture](/images/2-Proposal/stock-alerts-architecture.png)
 
 ## Khách hàng là ai?
@@ -38,4 +40,3 @@ Hệ thống giúp tự động hóa các bước chính:
 6. Cho phép Trader phê duyệt trước khi gửi email cho khách hàng.
 
 Nhờ đó, hệ thống giúp rút ngắn thời gian phân tích, tăng khả năng theo dõi nhiều mã cổ phiếu cùng lúc và đảm bảo khuyến nghị cuối cùng vẫn có sự kiểm soát của con người.
-

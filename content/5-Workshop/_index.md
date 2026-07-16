@@ -12,10 +12,11 @@ This workshop guides the deployment of a stock analysis system using AWS Serverl
 
 The main goal of this workshop is to help learners understand how AWS managed/serverless services can be combined to build a scalable financial data processing pipeline with cost control and a Human-in-the-loop review process before recommendations are sent to customers.
 
+**Project source code:** [aws-stock-analyzer-serverless](https://github.com/DaoPhanXuanThien/aws-stock-analyzer-serverless.git)
+
 #### Content
 
 1. [Project overview](5.1-Workshop-overview/)
 2. [Prerequisites and service deployment](5.2-Prerequiste/)
 3. [Why this architecture was chosen](5.3-Why-Choose-Structure/)
 4. [System testing](5.4-Test/)
-
